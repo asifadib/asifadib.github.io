@@ -1,1131 +1,629 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>AsifAdib - Personal Portfolio Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Template Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <!-- Template CSS Files -->
-    <link type="text/css" media="all" href="css/bootstrap.min.css" rel="stylesheet">
-    <link type="text/css" media="all" href="css/jquery.animatedheadline.css" rel="stylesheet">
-    <link type="text/css" media="all" href="css/font-awesome.min.css" rel="stylesheet">
-    <link type="text/css" media="all" href="css/style.css" rel="stylesheet">
-    <link type="text/css" media="all" href="css/skins/blue.css" rel="stylesheet">
-    <!-- Template JS Files -->
-    <script src="js/modernizr.js"></script>
-    <!-- Live Style Switcher - demo only -->
-	<link rel="alternate stylesheet" type="text/css" title="blue" href="css/skins/blue.css" />
-    <link rel="alternate stylesheet" type="text/css" title="green" href="css/skins/green.css" />
-    <link rel="alternate stylesheet" type="text/css" title="orange" href="css/skins/orange.css" />
-    <link rel="alternate stylesheet" type="text/css" title="yellow" href="css/skins/yellow.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+<meta name="description" content="Asif Adib - Front-End Web Developer Personal Portfolio Website">
+<meta name="author" content="Asif Adib">
+<!-- Website Title -->
+<title>Asif Adib - Front-End Web Designer</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+
+<!-- Web Fonts -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+<!-- Stylesheet
+============================== -->
+<!-- Animate -->
+<link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css" />
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+<!-- Owl Carousel -->
+<link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+<!-- Magnific Popup -->
+<link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css" />
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<!-- Colors Css -->
+<link id="color-switcher" type="text/css" rel="stylesheet" href="#" />
 </head>
 
-<body class="dark bgimage">
-    <div class="page">
-        <!-- Live Color Switcher Starts - demo only -->
-        <div id="switcher" class="">
-            <div class="content-switcher">
-                <h4>COLOR SWITCHER</h4>
-                <ul>
-					<li>
-                        <a href="#" onclick="setActiveStyleSheet('blue');" title="blue" class="color"><img src="img/styleswitcher/blue.png" alt="blue" /></a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="setActiveStyleSheet('orange');" title="orange" class="color"><img src="img/styleswitcher/orange.png" alt="orange" /></a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="setActiveStyleSheet('green');" title="green" class="color"><img src="img/styleswitcher/green.png" alt="green" /></a>
-                    </li>
-                    <li>
-                        <a href="#" onclick="setActiveStyleSheet('yellow');" title="yellow" class="color"><img src="img/styleswitcher/yellow.png" alt="yellow" /></a>
-                    </li>
-                </ul>
-                
-                <br>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
 
-                <a href="#" class="waves-effect waves-light btn font-weight-600 purchase hoverable"> <span><i class="fa fa-shopping-cart"></i> HIRE ME</span></a>
-                <div id="hideSwitcher">&times;</div>
-            </div>
+<!-- Preloader -->
+<div class="preloader">
+  <div class="lds-ellipsis">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+<!-- Preloader End --> 
+
+<!-- Document Wrapper   
+=============================== -->
+<div id="main-wrapper"> 
+  
+  <!-- Header -->
+  <header id="header" class="sticky-top-slide"> 
+    <!-- Navbar -->
+    <nav class="primary-menu navbar navbar-expand-lg text-uppercase navbar-line-under-text font-weight-600">
+      <div class="container position-relative">
+        <div class="col-auto col-lg-2 d-inline-flex pl-lg-0"> 
+          <!-- Logo --> 
+          <a class="logo" href="index.html" title="Callum"> <img src="images/logo.png" alt="Callum"/> </a> 
+          <!-- Logo End --> 
         </div>
-        <div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
-        <!-- Live Style Switcher Ends - demo only -->
-        <!-- Header Starts -->
-    <header id="header">
-		<div class="nav-container">
-			<div>
-				<!-- Mobile Navigation Starts -->
-				<ul id="nav" class="navigation">
-					<li class="active">
-						<div>
-							<a id="link-home" href="#home" class="active">
-								<i class="fa fa-home"></i><span>Home</span>
-							</a>
-						</div>
-					</li>
-					<li>
-						<div>
-							<a id="link-about" href="#about">
-								<i class="fa fa-user"></i><span>About me</span>
-							</a>
-						</div>
-					</li>
-					<li>
-						<div>
-							<a id="link-work" href="#work">
-								<i class="fa fa-briefcase"></i><span>my Portfolio</span>
-							</a>
-						</div>
-					</li>
-					<li>
-						<div>
-							<a id="link-contact" href="#contact">
-								<i class="fa fa-envelope-open"></i><span>get in touch</span>
-							</a>
-						</div>
-					</li>
-					<li>
-						<div>
-							<a id="link-blog" href="#blog">
-								<i class="fa fa-comments"></i><span>my Blog</span>
-							</a>
-						</div>
-					</li>
-				</ul>
-				<!-- Mobile Navigation Ends -->
-			</div>
-		</div>
-		<!-- Stretchy Navigation Starts -->
-		<div class="cd-stretchy-nav">
-			<a class="cd-nav-trigger" href="#0">
-				<span aria-hidden="true"></span>
-			</a>
-			<ul class="stretchy-nav">
-				<li class="active"><a href="#home"><span>Home</span></a></li>
-				<li><a href="#about"><span>About</span></a></li>
-				<li><a href="#works"><span>Portfolio</span></a></li>
-				<li><a href="#contact"><span>Contact</span></a></li>
-				<li><a href="#blog"><span>Blog</span></a></li>
-			</ul>
-			<span aria-hidden="true" class="stretchy-nav-bg"></span>
-		</div>
-		<!-- Stretchy Navigation Ends -->
-    </header>
-    <!-- Header Ends -->
-        <!-- Main Content Starts -->
-        <main id="main">
-            <!-- Back To Home Starts [ONLY MOBILE] -->
-            <span class="back-mobile" id="back-mobile"><i class="fa fa-arrow-left"></i></span>
-            <!-- Back To Home Ends [ONLY MOBILE] -->
-            <!-- Home Section Starts -->
-            <section id="home" class="active">
-                <!-- Text Rotator Starts -->
-                <div class="main-text-container">
-					<img class="leftimagepicture" src="img/leftimage-dark.jpg" alt=""/>
-                    <div class="main-text" id="selector">
-                        <h3>Hi there !</h3>
-                        <h1 class="ah-headline">
-					I'm
-						<span class="ah-words-wrapper">
-                            <b class="is-visible">asif adib</b>
-							<b>a web designer</b>
-							<b>a web developer</b>
-							<b>a blogger</b>
-							<b>a freelancer</b>
-						</span>
-					</h1>
-                        <p>I'm a Freelance Front-End Designer and Developer based in Comilla, Bangladesh. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.</p>
-                        <div class="call-to-actions-home">
-                            <div class="text-left">
-                                <a href="#about" class="btn link-portfolio-one"><span><i class="fa fa-user"></i>more about me</span></a>
-                                <a href="#work" class="btn btn-secondary link-portfolio-two"><span><i class="fa fa-suitcase"></i>portfolio</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Text Rotator Ends -->
-            </section>
-            <!-- Home Section Ends -->
-            <!-- About Section Starts -->
-            <section id="about">
-                <!-- Main Heading Starts -->
-                <div class="container page-title text-center">
-                    <h2 class="text-center">about <span>me</span></h2>
-                    <span class="title-head-subtitle">I design and code beautiful things, and I love what I do.</span>
-                </div>
-                <!-- Main Heading Ends -->
-                <div class="container infos">
-                    <div class="row personal-info">
-                        <!-- Personal Infos Starts -->
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-							<div class="image-container">
-								<img class="img-fluid d-block" src="img/leftimage-dark.jpg"  alt="" />
-							</div>
-							<p  class="d-block d-md-none">I'm a Freelance Front-End Designer and Developer based in Comilla, Bangladesh. I strives to build immersive and beautiful web applications through carefully crafted code and user-centric design.</p>
-						</div>
-						<div class="row col-xl-6 col-lg-6 col-md-12">
-							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-								<ul class="list-1">
-									<li>
-										<h6><span class="font-weight-600">First Name</span>Asif</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Last Name</span>Adib</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Birthdate</span>02 march 1997</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Nationality</span>Bangladeshi</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Experience</span>2 years</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Address</span>Comilla</h6>
-									</li>
-								</ul>
-							</div>
-							<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-								<ul class="list-2">
-									<li>
-										<h6><span class="font-weight-600">Freelance</span>Available</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Langages</span>Bengali, English</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Phone</span>+8801687362780</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Email</span>asifadib780@gmail.com</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Skype</span>live:asifadib780</h6>
-									</li>
-									<li>
-										<h6><span class="font-weight-600">Github</span>asifadib</h6>
-									</li>
-								</ul>
-							</div>
-							<div class="col-12 resume-btn-container">
-								<a href="#" class="btn btn-resume"><span><i class="fa fa-download"></i>download my cv</span></a>
-							</div>
-						</div>
-                        <!-- Personal Infos Ends -->
-                    </div>
-                </div>
-                <!-- Download CV Starts -->
-                <div class="container col-12 mx-auto text-center">
-                    <hr class="about-section" />
-                </div>
-                <!-- Download CV Ends -->
-                <!-- Resume Starts -->
-                <div class="resume-container">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Experience Starts -->
-                            <div class="col-xl-6 col-lg-6 col-md-6">
-                                <h2 class="font-weight-600 uppercase title-section">experience</h2>
-                                <div class="resume-items">
-                                    <!-- Item Starts -->
-                                    <div class="item">
-                                        <span class="bullet"></span>
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>2017 - 2019</span>
-                                                <span class="d-block font-weight-400 uppercase">
-												web designer 
-												<span class="separator"></span>
-                                                <span class="font-weight-700">Envato</span>
-                                                </span>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Item Ends -->
-                                    <!-- Item Starts -->
-                                    <div class="item">
-                                        <span class="bullet"></span>
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>2014 - 2017</span>
-                                                <span class="d-block font-weight-400 uppercase">
-												web developer 
-												<span class="separator"></span>
-                                                <span class="font-weight-700">Twitter</span>
-                                                </span>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Item Ends -->
-                                    <!-- Item Starts -->
-                                    <div class="item">
-                                        <span class="bullet"></span>
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>2010 - 2014</span>
-                                                <span class="d-block font-weight-400 uppercase">
-												Consultant
-												<span class="separator"></span>
-                                                <span class="font-weight-700">Google</span>
-                                                </span>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Item Ends -->
-                                </div>
-
-                            </div>
-                            <!-- Experience Ends -->
-                            <!-- Education Starts -->
-                            <div class="col-xl-6 col-lg-6 col-md-6 skills-container">
-                                <h2 class="font-weight-600 uppercase title-section">Education</h2>
-                                <div class="resume-items">
-                                    <!-- Item Starts -->
-                                    <div class="item">
-                                        <span class="bullet"></span>
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>2007 - 2010</span>
-                                                <span class="d-block font-weight-400 uppercase">
-												Engineering Degree 
-												<span class="separator"></span>
-                                                <span class="font-weight-700">Istanbul University</span>
-                                                </span>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Item Ends -->
-                                    <!-- Item Starts -->
-                                    <div class="item">
-                                        <span class="bullet"></span>
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>2005 - 2007</span>
-                                                <span class="d-block font-weight-400 uppercase">
-												Masters Degree 
-												<span class="separator"></span>
-                                                <span class="font-weight-700">Paris University</span>
-                                                </span>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Item Ends -->
-                                    <!-- Item Starts -->
-                                    <div class="item">
-                                        <span class="bullet"></span>
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <span class="year"><i class="fa fa-calendar"></i><i class="fa fa-caret-right"></i>2001 - 2005</span>
-                                                <span class="d-block font-weight-400 uppercase">
-												Bachelor Degree
-												<span class="separator"></span>
-                                                <span class="font-weight-700">Moscow High School</span>
-                                                </span>
-                                            </div>
-                                            <div class="card-body">
-                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet diam nonummy.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Item Ends -->
-                                </div>
-                            </div>
-                            <!-- Education Ends -->
-                        </div>
-                        <!-- Skills Starts -->
-                        <div class="row">
-                            <!-- Skill Bar Starts -->
-                            <div class="col-12">
-                                <h2 class="font-weight-600 uppercase title-section skills-title">skills</h2>
-                            </div>
-                            <!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">javascript</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="60" style="width: 60%;"></span>
-                                    <span class="percent" style="right: calc(40% - 21px);">60%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-							<!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">html5</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="95" style="width: 95%;"></span>
-                                    <span class="percent" style="right: calc(5% - 21px);">95%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-                            <!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">Css3</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="90" style="width: 90%;"></span>
-                                    <span class="percent" style="right: calc(10% - 21px);">90%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-                            <!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">Sass</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="75" style="width: 75%;"></span>
-                                    <span class="percent" style="right: calc(25% - 21px);">75%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-                            <!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">Bootstrap4</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="95" style="width: 95%;"></span>
-                                    <span class="percent" style="right: calc(5% - 21px);">95%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-                            <!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">jQuery</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="90" style="width: 90%;"></span>
-                                    <span class="percent" style="right: calc(10% - 21px);">90%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-                            <!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">PSD to HTML</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="95" style="width: 95%;"></span>
-                                    <span class="percent" style="right: calc(5% - 21px);">95%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-							<!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">photoshop</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="70" style="width: 70%;"></span>
-                                    <span class="percent" style="right: calc(30% - 21px);">70%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-                            
-							<!-- Skill Bar Starts -->
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <span class="skill-text">wordpress customization</span>
-                                <div class="chart-bar">
-                                    <span class="item-progress" data-percent="98" style="width: 98%;"></span>
-                                    <span class="percent" style="right: calc(2% - 21px);">98%<div class="arrow"></div></span>
-                                </div>
-                            </div>
-                            <!-- Skill Bar Ends -->
-                        </div>
-                        <!-- Skills Starts -->
-                    </div>
-
-                    <!-- Resume Ends -->
-                </div>
-            </section>
-            <!-- About Section Ends -->
-            <!-- Portfolio Section Starts -->
-            <section id="work">
-                <div class="portfolio-container">
-                    <!-- Main Heading Starts -->
-                    <div class="container page-title text-center">
-                        <h2 class="text-center">my <span>portfolio</span></h2>
-						<span class="title-head-subtitle">a few recent design and coding projects. Want to see more? Email me.</span>
-                    </div>
-                    <!-- Main Heading Ends -->
-                    <div class="portfolio-section">
-                        <div class="container cd-container">
-                            <div>
-                                <!-- Portfolio Items Starts -->
-                                <ul class="row" id="portfolio-items">
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-1">
-                                            <img src="img/projects/project-1.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Image Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-2">
-                                            <img src="img/projects/project-2.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Youtube Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-3">
-                                            <img src="img/projects/project-8.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Slider Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-4">
-                                            <img src="img/projects/project-6.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Video Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-5">
-                                            <img src="img/projects/project-5.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Image Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-6">
-                                            <img src="img/projects/project-4.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Image Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-7">
-                                            <img src="img/projects/project-7.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Image Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                    <!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-8">
-                                            <img src="img/projects/project-3.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Image Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-									<!-- Portfolio Item Starts -->
-                                    <li class="col-12 col-md-6 col-lg-4">
-                                        <a href="#0" data-type="project-9">
-                                            <img src="img/projects/project-9.jpg" alt="Project" class="img-fluid">
-                                            <div><span>Image Format</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- Portfolio Item Ends -->
-                                </ul>
-                                <!-- Portfolio Items Ends -->
-                            </div>
-                        </div>
-                    </div>
-					<!-- PORTFOLIO OVERLAY STARTS -->
-					<div class="portfolio-overlay"></div>
-					<!-- PORTFOLIO OVERLAY ENDS -->
-                </div>
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-1">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <img src="img/projects/project-1.jpg" alt="Project Image">
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Image Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-2">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <div class="videocontainer">
-                            <iframe class="youtube-video" src="https://www.youtube.com/embed/7e90gBu4pas?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Youtube Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-3">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <div id="slider" class="carousel slide portfolio-slider" data-ride="carousel">
-                            <!-- The slideshow -->
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="img/projects/project-8.jpg" alt="slide 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/projects/project-7.jpg" alt="slide 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="img/projects/project-5.jpg" alt="slide 3">
-                                </div>
-                            </div>
-                            <!-- Left and right controls -->
-                            <a class="carousel-control-prev" href="#slider" data-slide="prev"> <span class="fa fa-chevron-left carousel-controls"></span>
-                            </a>
-                            <a class="carousel-control-next" href="#slider" data-slide="next"> <span class="fa fa-chevron-right carousel-controls"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Slider Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-4">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <video id="video" class="responsive-video" controls poster="img/projects/project-6.jpg">
-                            <source src="img/projects/video.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Video Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-5">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <img src="img/projects/project-5.jpg" alt="Project Image">
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Image Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-6">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <img src="img/projects/project-4.jpg" alt="Project Image">
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Image Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-7">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <img src="img/projects/project-7.jpg" alt="Project Image">
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Image Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-8">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <img src="img/projects/project-3.jpg" alt="Project Image">
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Image Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-				<!-- Portfolio Project Content Starts -->
-                <div class="project-info-container project-9">
-                    <!-- Main Content Starts -->
-                    <div class="project-info-main-content">
-                        <img src="img/projects/project-9.jpg" alt="Project Image">
-                    </div>
-                    <!-- Main Content Ends -->
-                    <!-- Project Details Starts -->
-                    <div class="projects-info row">
-                        <div class="col-12 col-sm-6 p-none">
-                            <h3 class="font-weight-600 uppercase">Image Format</h3>
-                            <ul class="project-details">
-                                <li><i class="fa fa-file-text-o"></i><span class="font-weight-400 project-label"> Project </span>: <span class="font-weight-600 uppercase">Website</span>
-                                </li>
-                                <li><i class="fa fa-user-o"></i><span class="font-weight-400 project-label"> Client </span>: <span class="font-weight-600 uppercase">Envato</span>
-                                </li>
-                                <li><i class="fa fa-hourglass-o"></i><span class="font-weight-400 project-label"> Duration </span>: <span class="font-weight-600 uppercase">3 months</span>
-                                </li>
-                                <li><i class="fa fa-code"></i> <span class="font-weight-400 project-label"> Technologies</span> : <span class="font-weight-600 uppercase">html, javascript</span>
-                                </li>
-                                <li><i class="fa fa-money"></i> <span class="font-weight-400 project-label"> Budget</span> : <span class="font-weight-600 uppercase">1550 USD</span>
-                                </li>
-                            </ul>
-                            <a href="#" class="btn"><span><i class="fa fa-external-link"></i>preview</span></a>
-                        </div>
-                        <div class="col-6 p-none text-right">
-                            <a href="#" class="btn btn-secondary close-project"><span><i class="fa fa-close"></i>Close</span></a>
-                        </div>
-                    </div>
-                    <!-- Project Details Ends -->
-                </div>
-                <!-- Portfolio Project Content Ends -->
-                <span class="back-mobile close-project"><i class="fa fa-arrow-left"></i></span>
-            </section>
-            <!-- Portfolio Section Ends -->
-            <!-- Contact Section Starts -->
-            <section id="contact">
-                <div class="contact-container">
-                    <!-- Main Heading Starts -->
-                    <div class="container page-title text-center">
-                        <h2 class="text-center">get <span>in touch</span></h2>
-						<span class="title-head-subtitle">I’m always open to discussing product design work or partnerships.</span>
-                    </div>
-                    <!-- Main Heading Ends -->
-                    <div class="container">
-                        <div class="row contact">
-                            <!-- Contact Infos Starts -->
-                            <div class="col-12 col-md-4 col-xl-4 leftside">
-                                <ul class="custom-list">
-                                    <li>
-                                        <h6 class="font-weight-600"> <span class="contact-title">Phone</span><i class="fa fa-whatsapp"></i><span class="contact-content">+8801687362780</span></h6>
-                                    </li>
-                                    <li>
-                                        <h6 class="font-weight-600"> <span class="contact-title">email</span><i class="fa fa-envelope-o fs-14"></i><span class="contact-content">asifadib780@gmail.com</span></h6>
-
-                                    </li>
-                                    <li>
-                                        <h6 class="font-weight-600"><span class="contact-title">Skypee </span><i class="fa fa-skype"></i><span class="contact-content">live:asifadib780</span></h6>
-                                    </li>
-                                    <li>
-                                        <h6 class="font-weight-600"><span class="contact-title">instagram</span><i class="fa fa-instagram"></i><span class="contact-content">asifadib780</span></h6>
-
-                                    </li>
-                                </ul>
-
-                                <!-- Social Media Profiles Starts -->
-
-                                <div class="social">
-                                    <h6 class="font-weight-600 uppercase">Follow Me</h6>
-                                    <ul class="list-inline social social-intro text-center p-none">
-                                        <li class="github"><a title="Github" href="https://github.com/asifadib"><i class="fa fa-github"></i></a>
-                                        </li>
-                                        <li class="medium"><a title="Medium" href="https://medium.com/@asifadib"><i class="fa fa-medium"></i></a>
-                                        </li>
-                                        <li class="quora"><a title="Quora" href="https://bn.quora.com/profile/Asif-Adib-1"><i class="fa fa-quora"></i></a>
-                                        </li>
-                                        <li class="facebook"><a title="Facebook" href="https://facebook.com/asifadib.official"><i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li class="twitter"><a title="Twitter" href="https://twitter.com/asifadib780"><i class="fa fa-twitter"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Social Media Profiles Ends -->
-                            </div>
-                            <!-- Contact Infos Ends -->
-                            <!-- Contact Form Starts -->
-                            <div class="col-12 col-md-8 col-xl-8 rightside">
-                                <p>
-                                    If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.
-                                </p>
-                                <form class="contactform" method="post" action="http://slimhamdi.net/istanbul/demos/php/process-form.php">
-                                    <div class="row">
-                                        <!-- Name Field Starts -->
-                                        <div class="form-group col-xl-6"> <i class="fa fa-user prefix"></i>
-                                            <input id="name" name="name" type="text" class="form-control" placeholder="YOUR NAME" required>
-                                        </div>
-                                        <!-- Name Field Ends -->
-                                        <!-- Email Field Starts -->
-                                        <div class="form-group col-xl-6"> <i class="fa fa-envelope prefix"></i>
-                                            <input id="email" type="email" name="email" class="form-control" placeholder="YOUR EMAIL" required>
-                                        </div>
-                                        <!-- Email Field Ends -->
-                                        <!-- Comment Textarea Starts -->
-                                        <div class="form-group col-xl-12"> <i class="fa fa-comments prefix"></i>
-                                            <textarea id="comment" name="comment" class="form-control" placeholder="YOUR MESSAGE" required></textarea>
-                                        </div>
-                                        <!-- Comment Textarea Ends -->
-                                    </div>
-                                    <!-- Submit Form Button Starts -->
-                                    <div class="submit-form">
-                                        <button class="btn button-animated" type="submit" name="send"><span><i class="fa fa-send"></i> Send Message</span></button>
-                                    </div>
-                                    <!-- Submit Form Button Ends -->
-                                    <div class="form-message"> <span class="output_message text-center font-weight-600 uppercase"></span>
-                                    </div>
-                                </form>
-                            </div>
-                            <!-- Contact Form Ends -->
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Contact Section Ends -->
-            <!-- Blog Section Starts -->
-            <section id="blog">
-                <div class="container page-title text-center">
-                    <h2 class="text-center">latest <span>posts</span></h2>
-					<span class="title-head-subtitle">tips, insights, and best practices about web design and developpment</span>
-                </div>
-                <div class="container">
-                    <div class="row">
-                        <!-- Article Starts -->
-                        <div class="col-12 col-sm-6">
-                            <article>
-                                <!-- Figure Starts -->
-                                <figure class="blog-figure">
-                                    <a href="blog-post.html">
-                                        <img class="img-fluid" src="img/blog/blog-post-4.jpg" alt="">
-                                    </a>
-                                    <div class="post-date"> <span>23</span>
-                                        <span>JUN</span>
-                                    </div>
-                                </figure>
-                                <!-- Figure Ends -->
-                                <a href="blog-post.html">
-                                    <h4>create a wordpress theme from scratch</h4>
-                                </a>
-                                <!-- Excerpt Starts -->
-                                <div class="blog-excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris Lorem ...</p>
-                                    <a href="blog-post.html" class="btn readmore"><span>Read more</span></a>
-                                </div>
-                                <!-- Excerpt Ends -->
-                            </article>
-                        </div>
-                        <!-- Article Ends -->
-                        <!-- Article Starts -->
-                        <div class="col-12 col-sm-6">
-                            <article>
-                                <!-- Figure Starts -->
-                                <figure class="blog-figure">
-                                    <a href="blog-post.html">
-                                        <img class="img-fluid" src="img/blog/blog-post-1.jpg" alt="">
-                                    </a>
-                                    <div class="post-date"> <span>18</span>
-                                        <span>aug</span>
-                                    </div>
-                                </figure>
-                                <!-- Figure Ends -->
-                                <a href="blog-post.html">
-                                    <h4>Effective Marketing Strategy tips</h4>
-                                </a>
-                                <!-- Excerpt Starts -->
-                                <div class="blog-excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris Lorem ...</p>
-                                    <a href="blog-post.html" class="btn readmore"><span>Read more</span></a>
-                                </div>
-                                <!-- Excerpt Ends -->
-                            </article>
-                        </div>
-                        <!-- Article Ends -->
-                        <!-- Article Starts -->
-                        <div class="col-12 col-sm-6">
-                            <article>
-                                <!-- Figure Starts -->
-                                <figure class="blog-figure">
-                                    <a href="blog-post.html">
-                                        <img class="img-fluid" src="img/blog/blog-post-3.jpg" alt="">
-                                    </a>
-                                    <div class="post-date"> <span>01</span>
-                                        <span>mar</span>
-                                    </div>
-                                </figure>
-                                <!-- Figure Ends -->
-                                <a href="blog-post.html">
-                                    <h4>free psd and sketch ressouces</h4>
-                                </a>
-                                <!-- Excerpt Starts -->
-                                <div class="blog-excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris Lorem ...</p>
-                                    <a href="blog-post.html" class="btn readmore"><span>Read more</span></a>
-                                </div>
-                                <!-- Excerpt Ends -->
-                            </article>
-                        </div>
-                        <!-- Article Ends -->
-                        <!-- Article Starts -->
-                        <div class="col-12 col-sm-6">
-                            <article>
-                                <!-- Figure Starts -->
-                                <figure class="blog-figure">
-                                    <a href="blog-post.html">
-                                        <img class="img-fluid" src="img/blog/blog-post-2.jpg" alt="">
-                                    </a>
-                                    <div class="post-date"> <span>01</span>
-                                        <span>mar</span>
-                                    </div>
-                                </figure>
-                                <!-- Figure Ends -->
-                                <a href="blog-post.html">
-                                    <h4>How to become a successful freelancer</h4>
-                                </a>
-                                <!-- Excerpt Starts -->
-                                <div class="blog-excerpt">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit massa vel mauris Lorem ...</p>
-                                    <a href="blog-post.html" class="btn readmore"><span>Read more</span></a>
-                                </div>
-                                <!-- Excerpt Ends -->
-                            </article>
-                        </div>
-                        <!-- Article Ends -->
-                        <!-- Link To Blog Starts -->
-                        <div class="col-12 col-sm-12 col-md-12 col-xl-12 col-lg-12 allposts"> <a href="blog.html" class="btn btn-secondary"><span><i class="fa fa-comments"></i>All posts</span></a>
-                        </div>
-                        <!-- Link To Blog Ends -->
-                    </div>
-                </div>
-            </section>
-            <!-- Blog Section Ends -->
-        </main>
-    </div>
-    <!-- Main Content Ends -->
-    <!-- Preloader Starts -->
-    <div class="preloader">
-        <div class="preloader-container">
-            <h1>asif</h1>
-            <div id="progress-line-container">
-                <div class="progress-line"></div>
-            </div>
-            <h1>adib</h1>
+        <div class="col col-lg-8 navbar-accordion px-0">
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+          <div id="header-nav" class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav">
+			  <li class="nav-item"><a class="nav-link smooth-scroll active" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#resume">Resume</a></li>
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
+              <!-- <li class="nav-item"><a class="nav-link smooth-scroll" href="#faq">FAQ</a></li> -->
+              <!-- <li class="nav-item"><a class="nav-link smooth-scroll" href="#testimonial">Client</a></li> -->
+              <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
+        <div class="col-auto col-lg-2 d-flex justify-content-end pl-0 mr-md-n2">
+		  <ul class="social-icons mb-n1">
+		  <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook"></i></a></li>
+          <li class="social-icons-twitter"><a data-toggle="tooltip" href="http://www.twitter.com/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+		  <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="" data-original-title="Instagram"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End --> 
+  </header>
+  <!-- Header End -->
+  
+  <!-- Content
+  ============================================= -->
+  <div id="content" role="main"> 
+    
+    <!-- Intro
+    ============================================= -->
+    <section id="home" class="bg-primary d-flex fullscreen-with-header position-relative">
+      <div class="container my-auto py-5 py-lg-0">
+        <div class="row py-4">
+          <div class="col-lg-7 text-center text-lg-left align-self-center order-1 order-lg-0">
+            <h1 class="text-12 font-weight-300 mb-0 text-uppercase">Hi, I'm Asif Adib</h1>
+            <div class="typed-strings">
+              <p>Designer</p>
+              <p>Developer</p>
+              <p>Blogger</p>
+            </div>
+            <h2 class="text-21 font-weight-600 text-uppercase mb-0 ml-n1"><span class="typed"></span></h2>
+            <p class="text-5">based in Cumilla, Bangladesh.</p>
+            <a href="#portfolio" class="btn btn-dark rounded-0 smooth-scroll mt-3">View My Works</a><a href="#contact" class="btn btn-link text-dark smooth-scroll mt-3">Contact Me<span class="text-4 ml-2"><i class="far fa-arrow-alt-circle-down"></i></span></a> </div>
+          <div class="col-lg-5 text-center align-self-center mb-4 mb-lg-0 order-0 order-lg-1">
+            <div class="bg-light rounded-pill d-inline-block p-3 shadow-lg wow zoomIn"> <img class="img-fluid rounded-pill d-block" src="images/web-developer.jpg" title="I'm Callum" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-down-arrow text-dark smooth-scroll"><span class="animated"><i class="fas fa-arrow-down"></i></span></a> </section>
+    <!-- Intro end --> 
+    
+    <!-- About
+    ============================================= -->
+    <section id="about" class="section">
+      <div class="container"> 
+        <!-- Heading -->
+        <p class="text-center mb-2 wow fadeInUp"><span class="bg-primary text-dark px-2">About Me</span></p>
+        <h2 class="text-10 font-weight-600 text-center mb-5 wow fadeInUp">Know Me More</h2>
+        <!-- Heading end-->
+        
+        <div class="mt-5">
+          <div class="row">
+            <div class="col-lg-8 text-center text-lg-left wow fadeInUp">
+              <h2 class="text-8 font-weight-400 mb-3">Hi, I'm <span class="font-weight-700 border-bottom border-3 border-primary">Asif Adib</span></h2>
+              <p class="text-5">I'm a designer & developer with a passion for web design. I enjoy developing simple, clean and slick websites that provide real value to the end user. Thousands of clients have procured exceptional results while working with me. Delivering work within time and budget which meets client’s requirements is our moto.</p>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+              <div class="featured-box style-4">
+                <div class="featured-box-icon text-25 font-weight-500 bg-primary rounded-circle"><span class="wow heartBeat" data-wow-delay="1.3s">03</span></div>
+                <h3 class="text-7 wow rubberBand" data-wow-delay="2s">Years of <span class="font-weight-700">Experiance</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-6 col-lg-3 my-2 wow fadeInUp">
+            <p class="text-muted font-weight-500 mb-0">Full Name:</p>
+            <p class="text-4 text-dark font-weight-600 mb-0">Asif Mahmud Khan Adib</p>
+          </div>
+          <div class="col-6 col-lg-3 my-2 wow fadeInUp" data-wow-delay="0.2s">
+            <p class="text-muted font-weight-500 mb-0">Email:</p>
+            <p class="text-4 text-dark font-weight-600 mb-0"><a class="text-dark font-weight-600 btn-link" href="">asifadib780@gmail.com</a></p>
+          </div>
+          <div class="col-6 col-lg-3 my-2 wow fadeInUp" data-wow-delay="0.3s">
+            <p class="text-muted font-weight-500 mb-0">Date of birth:</p>
+            <p class="text-4 text-dark font-weight-600 mb-0">05 September, 1997</p>
+          </div>
+          <div class="col-6 col-lg-3 my-2 wow fadeInUp" data-wow-delay="0.4s">
+            <p class="text-muted font-weight-500 mb-0">From:</p>
+            <p class="text-4 text-dark font-weight-600 mb-0">Cumilla, Bangladesh.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About end --> 
+    
+    <!-- Services
+    ============================================= -->
+    <section id="services" class="section bg-light">
+      <div class="container"> 
+        <!-- Heading -->
+        <p class=" text-center mb-2 wow fadeInUp"><span class="bg-primary text-dark px-2">What I Do?</span></p>
+        <h2 class="text-10 font-weight-600 text-center mb-5 wow fadeInUp">How I can help your next project</h2>
+        <!-- Heading end-->
+        
+        <div class="row">
+          <div class="col-sm-6 col-lg-4 mt-5 wow fadeInUp">
+            <div class="featured-box text-center px-md-4">
+              <div class="featured-box-icon text-primary text-13"> <i class="fas fa-palette"></i> </div>
+              <h3 class="text-6 font-weight-600 mb-3">Graphic Design</h3>
+              <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mt-5 wow fadeInUp">
+            <div class="featured-box text-center px-md-4">
+              <div class="featured-box-icon text-primary text-13"> <i class="fas fa-desktop"></i></div>
+              <h3 class="text-6 font-weight-600 mb-3">Web Design</h3>
+              <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mt-5 wow fadeInUp">
+            <div class="featured-box text-center px-md-4">
+              <div class="featured-box-icon text-primary text-13"> <i class="fas fa-pencil-ruler"></i> </div>
+              <h3 class="text-6 font-weight-600 mb-3">Web Development</h3>
+              <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mt-5 wow fadeInUp">
+            <div class="featured-box text-center px-md-4">
+              <div class="featured-box-icon text-primary text-13"> <i class="fas fa-paint-brush"></i> </div>
+              <h3 class="text-6 font-weight-600 mb-3">Brand Identity</h3>
+              <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mt-5 wow fadeInUp">
+            <div class="featured-box text-center px-md-4">
+              <div class="featured-box-icon text-primary text-13"> <i class="fas fa-chart-area"></i> </div>
+              <h3 class="text-6 font-weight-600 mb-3">Business Analysis</h3>
+              <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. </p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 mt-5 wow fadeInUp">
+            <div class="featured-box text-center px-md-4">
+              <div class="featured-box-icon text-primary text-13"> <i class="fas fa-bullhorn"></i> </div>
+              <h3 class="text-6 font-weight-600 mb-3">Digital Marketing</h3>
+              <p class="text-muted mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services end --> 
+    
+    <!-- Resume
+    ============================================= -->
+    <section id="resume" class="section">
+      <div class="container"> 
+        <!-- Heading -->
+        <p class=" text-center mb-2 wow fadeInUp"><span class="bg-primary text-dark px-2">Resume</span></p>
+        <h2 class="text-10 font-weight-600 text-center mb-5 wow fadeInUp">A summary of My Resume</h2>
+        <!-- Heading end-->
+        
+        <div class="row"> 
+          <!-- My Education -->
+          <div class="col-lg-6 wow fadeInUp">
+            <h2 class="text-7 font-weight-600 mb-4 pb-2">My Education</h2>
+            <div class="border-left border-2 border-primary pl-3">
+              <h3 class="text-5">Master in Computer Engineering</h3>
+              <p class="mb-2">Harvard University / 2015 - 2017</p>
+              <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p>
+              <hr class="my-4">
+              <h3 class="text-5">Bachelor in Computer Engineering</h3>
+              <p class="mb-2">University of California / 2014 - 2015</p>
+              <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p>
+              <hr class="my-4">
+              <h3 class="text-5">Computer Science</h3>
+              <p class="mb-2">International University / 2013 - 2014</p>
+              <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p>
+            </div>
+          </div>
+          <!-- My Experience -->
+          <div class="col-lg-6 mt-5 mt-lg-0 wow fadeInUp" data-wow-delay="0.2s">
+            <h2 class="text-7 font-weight-600 mb-4 pb-2">My Experience</h2>
+            <div class="border-left border-2 border-primary pl-3">
+              <h3 class="text-5">Sr. Font End Developer</h3>
+              <p class="mb-2">Apple Inc / 2020 - Current</p>
+              <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p>
+              <hr class="my-4">
+              <h3 class="text-5">Jr. Font End Developer</h3>
+              <p class="mb-2">Dribbble Inc / 2018 - 2020</p>
+              <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p>
+              <hr class="my-4">
+              <h3 class="text-5">HTML Developer</h3>
+              <p class="mb-2">Adobe Inc / 2017 - 2018</p>
+              <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- My Skills -->
+        <h2 class="text-7 font-weight-600 mb-4 pb-2 mt-5 wow fadeInUp">My Skills</h2>
+        <div class="row">
+          <div class="col-md-6 wow fadeInUp">
+            <p class="font-weight-500 text-left mb-2">Web Design <span class="float-right">85%</span></p>
+            <div class="progress progress-sm mb-4">
+              <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="font-weight-500 text-left mb-2">HTML5 <span class="float-right">95%</span></p>
+            <div class="progress progress-sm mb-4">
+              <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="font-weight-500 text-left mb-2">CSS3 <span class="float-right">90%</span></p>
+            <div class="progress progress-sm mb-4">
+              <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+          <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <p class="font-weight-500 text-left mb-2">JavaScript <span class="float-right">70%</span></p>
+            <div class="progress progress-sm mb-4">
+              <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="font-weight-500 text-left mb-2">Git - Github <span class="float-right">88%</span></p>
+            <div class="progress progress-sm mb-4">
+              <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="font-weight-500 text-left mb-2">Bootstrap5 <span class="float-right">92%</span></p>
+            <div class="progress progress-sm mb-4">
+              <div class="progress-bar" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+        <p class="text-center mt-5 wow fadeInUp"><a href="#" class="btn btn-outline-dark shadow-none rounded-0">Download CV</a></p>
+      </div>
+    </section>
+    <!-- Resume end --> 
+    
+    <!-- Portfolio
+    ============================================= -->
+    <section id="portfolio" class="section bg-light">
+      <div class="container"> 
+        <!-- Heading -->
+        <p class=" text-center mb-2 wow fadeInUp"><span class="bg-primary text-dark px-2">Portfolio</span></p>
+        <h2 class="text-10 font-weight-600 text-center mb-5 wow fadeInUp">Some of my most recent projects</h2>
+        <!-- Heading end--> 
+        
+        <!-- Filter Menu -->
+        <ul class="portfolio-menu nav nav-tabs font-weight-600 justify-content-left justify-content-md-center border-bottom-0 mb-4 wow fadeInUp">
+          <li class="nav-item"> <a data-filter="*" class="nav-link rounded-0 active" href="">All</a></li>
+          <li class="nav-item"> <a data-filter=".detailed" href="" class="nav-link rounded-0">Detailed</a></li>
+          <li class="nav-item"> <a data-filter=".mockups" href="" class="nav-link rounded-0">Mockups</a></li>
+          <li class="nav-item"> <a data-filter=".youtube" href="" class="nav-link rounded-0">YouTube Videos</a></li>
+          <li class="nav-item"> <a data-filter=".vimeo" href="" class="nav-link rounded-0">Vimeo Videos</a></li>
+        </ul>
+        <!-- Filter Menu end -->
+        <div class="portfolio wow fadeInUp">
+          <div class="row portfolio-filter">
+            <div class="col-sm-6 col-lg-4 detailed">
+              <div class="portfolio-box my-3">
+                <div class="portfolio-img"> <img class="img-fluid d-block" src="images/projects/project-1.jpg" alt="">
+                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-1.html"></a>
+                    <div class="portfolio-overlay-details">
+                      <p class="text-primary text-8"><i class="fas fa-file-alt"></i></p>
+                      <h5 class="text-white text-5">Detailed Project 1</h5>
+                      <span class="text-light">Category</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mockups" data-wow-delay="0.2s">
+              <div class="portfolio-box my-3">
+                <div class="portfolio-img"> <img class="img-fluid d-block" src="images/projects/project-2.jpg" alt="">
+                  <div class="portfolio-overlay"> <a class="popup-img stretched-link" href="images/projects/project-2.jpg"></a>
+                    <div class="portfolio-overlay-details">
+                      <p class="text-primary text-8"><i class="fas fa-image"></i></p>
+                      <h5 class="text-white text-5">Mockups Design 1</h5>
+                      <span class="text-light">Category</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 youtube" data-wow-delay="0.3s">
+              <div class="portfolio-box my-3">
+                <div class="portfolio-img"> <img class="img-fluid d-block" src="images/projects/project-3.jpg" alt="">
+                  <div class="portfolio-overlay"> <a class="popup-youtube stretched-link" href="https://www.youtube.com/watch?v=PMNnEEEacCg"></a>
+                    <div class="portfolio-overlay-details">
+                      <p class="text-primary text-8"><i class="fas fa-video"></i></p>
+                      <h5 class="text-white text-5">YouTube Video</h5>
+                      <span class="text-light">Category</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 vimeo">
+              <div class="portfolio-box my-3">
+                <div class="portfolio-img"> <img class="img-fluid d-block" src="images/projects/project-4.jpg" alt="">
+                  <div class="portfolio-overlay"> <a class="popup-vimeo stretched-link" href="https://vimeo.com/259411563"></a>
+                    <div class="portfolio-overlay-details">
+                      <p class="text-primary text-8"><i class="fas fa-video"></i></p>
+                      <h5 class="text-white text-5">Vimeo Video</h5>
+                      <span class="text-light">Category</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 detailed" data-wow-delay="0.2s">
+              <div class="portfolio-box my-3">
+                <div class="portfolio-img"> <img class="img-fluid d-block" src="images/projects/project-5.jpg" alt="">
+                  <div class="portfolio-overlay"> <a class="popup-ajax stretched-link" href="ajax/portfolio-ajax-project-2.html"></a>
+                    <div class="portfolio-overlay-details">
+                      <p class="text-primary text-8"><i class="fas fa-file-alt"></i></p>
+                      <h5 class="text-white text-5">Detailed Project 2</h5>
+                      <span class="text-light">Category</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 mockups" data-wow-delay="0.3s">
+              <div class="portfolio-box my-3">
+                <div class="portfolio-img"> <img class="img-fluid d-block" src="images/projects/project-6.jpg" alt="">
+                  <div class="portfolio-overlay"> <a class="popup-img stretched-link" href="images/projects/project-6.jpg"></a>
+                    <div class="portfolio-overlay-details">
+                      <p class="text-primary text-8"><i class="fas fa-image"></i></p>
+                      <h5 class="text-white text-5">Mockups Design 2</h5>
+                      <span class="text-light">Category</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio end --> 
+    
+    <!-- Call to Action
+    ============================================= -->
+    <section>
+      <div class="hero-wrap">
+        <div class="hero-mask opacity-8 bg-dark"></div>
+        <div class="hero-bg parallax" style="background-image:url('images/intro-bg-2.jpg');"></div>
+        <div class="hero-content section">
+          <div class="container text-center py-5 wow fadeInUp">
+            <h2 class="text-10 font-weight-600 text-white mb-5">Interested in working with me?</h2>
+            <a href="#contact" class="btn btn-primary rounded-0 smooth-scroll wow rubberBand" data-wow-delay="1s">Hire Me!</a> </div>
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action end --> 
+    
+    <!-- FAQ
+    ============================================= -->
+    <section id="faq" class="section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-0 wow fadeInUp"> 
+            <!-- Heading -->
+            <p class="text-center text-lg-left mb-2"><span class="bg-primary text-dark px-2">FAQ</span></p>
+            <h2 class="text-10 font-weight-600 text-center text-lg-left mb-5">Have any questions?</h2>
+            <!-- Heading end-->
+            <div class="accordion accordion-alternate" id="faqTopics">
+              <div class="card">
+                <div class="card-header" id="heading1">
+                  <h5 class="mb-0"> <a href="#" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">What is Callum?</a> </h5>
+                </div>
+                <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#faqTopics">
+                  <div class="card-body"> Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Mutat tacimates id sit. Ridens mediocritatem ius an, eu nec magna imperdiet. </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="heading2">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">How Can I Help You?</a> </h5>
+                </div>
+                <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#faqTopics">
+                  <div class="card-body">
+                    <p>Iisque Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p>
+                    <p class="mb-0">Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="heading3">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Simple process of workflow?</a> </h5>
+                </div>
+                <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#faqTopics">
+                  <div class="card-body"> Iisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure. Mutat tacimates id sit. Ridens mediocritatem ius an, eu nec magna imperdiet. </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="heading4">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Is Callum a Multi-purpose template?</a> </h5>
+                </div>
+                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#faqTopics">
+                  <div class="card-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="heading5">
+                  <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">Why responsive one page template?</a> </h5>
+                </div>
+                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#faqTopics">
+                  <div class="card-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-flex align-items-center justify-content-center mb-5 mb-lg-0 order-0 order-lg-1 wow fadeIn" data-wow-delay="1s"> <img class="img-fluid" src="images/faq.png" title="FAQ" alt="faq"> </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ end --> 
+    
+    <!-- Testimonial
+    ============================================= -->
+    <section id="testimonial" class="section  bg-secondary">
+      <div class="container"> 
+        <!-- Heading -->
+        <p class=" text-center mb-2 wow fadeIn"><span class="bg-primary text-dark px-2">Client Speak</span></p>
+        <h2 class="text-10 font-weight-600 text-white text-center mb-5 wow fadeIn">What Some of my Clients Say</h2>
+        <!-- Heading end-->
+        <div class="row">
+          <div class="col-lg-9 mx-auto wow fadeInUp">
+            <div class="owl-carousel owl-theme owl-light" data-autoplay="true" data-loop="true" data-nav="true" data-margin="30" data-slideby="1" data-stagepadding="5"  data-items-xs="1" data-items-sm="1" data-items-md="1" data-items-lg="1">
+              <div class="item text-center px-5"> <span class="text-9 text-primary"><i class="fa fa-quote-left"></i></span>
+                <p class="text-5 text-white">Easy to use, reasonably priced simply dummy text of the printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam possim iriure. simply dummy text of the printing and typesetting industry.”</p>
+                <img class="img-fluid d-inline-block w-auto rounded-circle shadow" src="images/testimonial/client-sm-1.jpg" alt=""> <strong class="d-block text-3 font-weight-600 text-white">Jay Shah</strong> <span class="text-light">Founder at Icomatic Pvt Ltd</span> </div>
+              <div class="item text-center px-5"> <span class="text-9 text-primary"><i class="fa fa-quote-left"></i></span>
+                <p class="text-5 text-white">“I am happy Working with printing and typesetting industry. Quidam lisque persius interesset his et, in quot quidam persequeris essent possim iriure. simply dummy text of the printing and typesetting industry.”</p>
+                <img class="img-fluid d-inline-block w-auto rounded-circle shadow" src="images/testimonial/client-sm-2.jpg" alt=""> <strong class="d-block text-3 font-weight-500 text-white">Patrick Cary</strong> <span class="text-light">Freelancer from USA</span> </div>
+              <div class="item text-center px-5"> <span class="text-9 text-primary"><i class="fa fa-quote-left"></i></span>
+                <p class="text-5 text-white">“Only trying it out since a few days. But up to now excellent. Seems to work flawlessly. priced simply dummy text of the printing and typesetting industry.”</p>
+                <img class="img-fluid d-inline-block w-auto rounded-circle shadow" src="images/testimonial/client-sm-3.jpg" alt=""> <strong class="d-block text-3 font-weight-500 text-white">Dennis Jacques</strong> <span class="text-light">Noon Inc</span> </div>
+              <div class="item text-center px-5"> <span class="text-9 text-primary"><i class="fa fa-quote-left"></i></span>
+                <p class="text-5 text-white">“I have used them twice now. Good rates, very efficient service and priced simply dummy text of the printing and typesetting industry quidam interesset his et. simply dummy text of the printing and typesetting industry. Excellent.”</p>
+                <img class="img-fluid d-inline-block w-auto rounded-circle shadow" src="images/testimonial/client-sm-4.jpg" alt=""> <strong class="d-block text-3 font-weight-500 text-white">Chris Tom</strong> <span class="text-light">Company CEO from UK</span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial end --> 
+    
+    <!-- Contact Me
+    ============================================= -->
+    <section id="contact" class="section bg-primary">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 text-center text-lg-left wow fadeInUp">
+            <h2 class="text-10 font-weight-600 mb-5">Let's get in touch</h2>
+            <p class="text-5 mb-5">I enjoy discussing new projects and design challenges. Please share as much info, as possible so we can get the most out of our first catch-up.</p>
+            <h3 class="text-5 font-weight-600">Living In:</h3>
+            <address class="text-4">
+              Victoria Degree College Rd,
+              Cumilla 3500, BD.
+            </address>
+            <h3 class="text-5 font-weight-600">Call:</h3>
+            <p class="text-4">+8801300463920</p>
+            <ul class="social-icons social-icons-lg justify-content-center justify-content-lg-start ml-lg-n2 mt-5">
+              <li class="social-icons-twitter"><a data-toggle="tooltip" href="https://twitter.com/asifadib780/" target="_blank" title="" data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
+              <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/asifadib.official/" target="_blank" title="" data-original-title="Facebook"><i class="fab fa-facebook"></i></a></li>
+              <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/asifadib780" target="_blank" title="" data-original-title="Instagram"><i class="fab fa-instagram"></i></a></li>
+              <li class="social-icons-github"><a data-toggle="tooltip" href="http://www.github.com/asifadib" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+              <li class="social-icons-dribbble"><a data-toggle="tooltip" href="http://www.dribbble.com/asifadib" target="_blank" title="" data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 ml-auto mt-5 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
+            <h2 class="text-10 font-weight-600 text-center text-lg-left mb-5">Estimate your Project?</h2>
+			<!-- Contact Form --> 
+			<form id="contact-form" class="form-border" action="php/mail.php" method="post">
+              <div class="form-group mb-4">
+                <label for="name">What is Your Name:</label>
+                <input id="name" name="name" type="text" class="form-control py-1" required >
+              </div>
+              <div class="form-group mb-4">
+                <label for="email">Your Email Address:</label>
+                <input id="email" name="email" type="email" class="form-control py-1" required >
+              </div>
+              <div class="form-group mb-4">
+                <label for="form-message">How can I Help you?:</label>
+                <textarea id="form-message" name="form-message" class="form-control py-1" rows="4" required ></textarea>
+              </div>
+              <p class="pt-2 mb-0 text-center text-lg-left">
+                <button id="submit-btn" class="btn btn-dark rounded-0 d-inline-flex" type="submit">Send <span class="ml-3"><i class="fas fa-arrow-right"></i></span></button>
+              </p>
+            </form>
+			<!-- Contact Form end --> 
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Me end --> 
+    
+  </div>
+  <!-- Content end --> 
+  
+  <!-- Footer
+  ============================================= -->
+  <footer id="footer" class="section bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-center text-lg-left wow fadeInUp">
+          <p class="mb-2 mb-lg-0">Copyright © 2021 | All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 wow fadeInUp">
+          <p class="mb-0 text-center text-lg-right">Developed by <a class="btn-link font-weight-600" href="http://www.asifadib.me/">Asif Adib</a></p>
+        </div>
+      </div>
     </div>
-    <!-- Preloader Ends -->
-	
-	
-	<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v8.0'
-          });
-        };
+  </footer>
+  <!-- Footer end --> 
+  
+</div>
+<!-- Document Wrapper end -->
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
+<!-- Back to Top
+============================================= --> 
+<a id="back-to-top" class="rounded-circle" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fas fa-arrow-up"></i></a> 
 
-     <!-- Your Chat Plugin code -->
-     <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="541050023003426"
-  logged_in_greeting="স্বাগতম "WebSheba.com" আমরা আপনাকে কিভাবে সাহায্যে করতে পারি?"
-  logged_out_greeting="স্বাগতম "WebSheba.com" আমরা আপনাকে কিভাবে সাহায্যে করতে পারি?">
-     </div>
-	
-	
-	
-	
-	
-	
-	
+<!-- Styles Switcher -->
+<div id="styles-switcher" class="right">
+  <h2 class="text-3 font-weight-600">Color Switcher</h2>
+  <hr>
+  <ul>
+    <li class="cyan" data-toggle="tooltip" title="Cyan" data-path="css/color-cyan.css"></li>
+    <li class="spring-green" data-toggle="tooltip" title="Spring Green" data-path="css/color-spring-green.css"></li>
+    <li class="green-yellow" data-toggle="tooltip" title="Green Yellow" data-path="css/color-green-yellow.css"></li>
+    <li class="lime-punch" data-toggle="tooltip" title="Lime Punch" data-path="css/color-lime-punch.css"></li>
+    <li class="violet" data-toggle="tooltip" title="Violet" data-path="css/color-violet.css"></li>
+    <li class="orange" data-toggle="tooltip" title="Orange" data-path="css/color-orange.css"></li>
+    <li class="pale-golden-rod" data-toggle="tooltip" title="Pale Golden Rod" data-path="css/color-pale-golden-rod.css"></li>
+    <li class="yellow" id="reset-color" data-toggle="tooltip" title="Reset Default Yellow"></li>
+  </ul>
+  <button class="btn switcher-toggle"><i class="fas fa-cog"></i></button>
+</div>
+<!-- Styles Switcher End --> 
 
-    <!-- Template JS Files -->
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/jquery.animatedheadline.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/transition.js"></script>
-    <!-- Live Style Switcher JS File - only demo -->
-    <script src="js/styleswitcher.js"></script>
-    <!-- Main JS Initialization File -->
-    <script src="js/custom.js"></script>
+<!-- JavaScript --> 
+<script src="vendor/jquery/jquery.min.js"></script> 
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<!-- Easing --> 
+<script src="vendor/jquery.easing/jquery.easing.min.js"></script> 
+<!-- Appear --> 
+<script src="vendor/jquery.appear/jquery.appear.min.js"></script> 
+<!-- WOW animation --> 
+<script src="vendor/wow/wow.min.js"></script>
+<!-- Images Loaded --> 
+<script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script> 
+<!-- Typed --> 
+<script src="vendor/typed/typed.min.js"></script> 
+<!-- Parallax Bg --> 
+<script src="vendor/parallaxie/parallaxie.min.js"></script> 
+<!-- Owl Carousel --> 
+<script src="vendor/owl.carousel/owl.carousel.min.js"></script> 
+<!-- isotope Portfolio Filter --> 
+<script src="vendor/isotope/isotope.pkgd.min.js"></script> 
+<!-- Magnific Popup --> 
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<!-- Style Switcher --> 
+<script src="js/switcher.min.js"></script> 
+<!-- Custom Script --> 
+<script src="js/theme.js"></script>
 </body>
 </html>
