@@ -3385,3 +3385,12 @@ input:-internal-autofill-selected {
   left: -40px;
   border-radius: 4px 0px 0px 4px;
 }
+
+
+
+/* logo */
+
+a.logo {
+  font-size: 30px;
+  color: #252b33;
+}
