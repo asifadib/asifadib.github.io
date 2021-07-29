@@ -3390,16 +3390,17 @@ input:-internal-autofill-selected {
 
 
 /* logo */
-
 a.logo {
   font-size: 30px;
   color: #252b33;
 }
 
+/* Hero image */
 .hero-bg img {
-  /* width: 85%; */
-  filter: grayscale();
-  transition: filter 0.4s ease-in-out;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+
+  transition: .4s all ease-in-out;
 }
 .hero-bg img:hover {
   filter: none;
