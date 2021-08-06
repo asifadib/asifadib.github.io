@@ -8,9 +8,9 @@
 - [WOW JS](https://wowjs.uk)
 
 ## Screens
-![Home Screen](/src/assets/images/screens/home_page.png)
-![Skills Screen](/src/assets/images/screens/skills.png)
-![OpenSource Screen](/src/assets/images/screens/open_source.png)
+![Home Screen](/src/assets/images/home_page.png)
+![Skills Screen](/src/assets/images/skills.png)
+![OpenSource Screen](/src/assets/images/open_source.png)
 
 ## License
 
